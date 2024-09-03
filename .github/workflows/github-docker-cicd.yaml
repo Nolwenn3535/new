@@ -34,7 +34,7 @@ jobs:
 #The fetch-depth: 0 parameter ensures that the complete commit history is fetched.
 
         - name: Set up Python 3.9
-          uses: actions/setup-python@v1
+          uses: actions/setup-python@v4
           with:
             python-version: 3.9
 #The second step sets up Python 3.9 by using the actions/setup-python@v1 action.
@@ -69,7 +69,7 @@ jobs:
  
       steps:
 
-      - uses: actions/checkout@v2 
+      - uses: actions/checkout@v3 
       - name: docker login
         run: | # log into docker hub account
           docker login -u $DOCKER_USER -p $DOCKER_PASSWORD
